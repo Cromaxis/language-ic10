@@ -1,0 +1,14 @@
+{
+  "name": "language-ic10",
+  "version": "0.1.0",
+  "description": "A Grammar Package for use with Stationeers' IC10 Language",
+  "keywords": [
+    "language",
+    "grammar"
+  ],
+  "repository": "https://github.com/atom/language-ic10",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

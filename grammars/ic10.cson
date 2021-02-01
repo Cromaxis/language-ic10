@@ -1,0 +1,46 @@
+# If this is your first time writing a language grammar, check out:
+#   - https://flight-manual.atom.io/hacking-atom/sections/creating-a-grammar/
+
+'scopeName': 'source.ic10'
+'name': 'ic10'
+'fileTypes': [ 'ic10' ]
+
+'patterns': [
+  {
+    'match': '[^,\\b,\s]#.*$'
+    'name': 'comment'
+  }
+  {
+    'match': '^#.*$'
+    'name': 'comment'
+  }
+  {
+    'match': '^add\\b|^sub\\b|^mul\\b|^div\\b|^mod\\b|^exp\\b|^log\\b|^sqrt\\b|^max\\b|^min\\b|^abs\\b|^ceil\\b|^floor\\b|^round\\b|^trunc\\b|^alias\\b|^define\\b|^move\\b|^rand\\b|^and\\b|^nor\\b|^or\\b|^xor\\b|^yield\\b|^hcf\\b|^l\\b|^lb\\b|^lr\\b|^ls\\b|^s\\b|^sb\\b|^peek\\b|^pop\\b|^push\\b|^j\\b|^jr\\b|^jal\\b'
+    'name': 'string'
+  }
+  {
+    'match': '^brap\\b|^bap\\b|^brna\\b|^bna\\b|^brdns\\b|^bdns\\b|^brdse\\b|^bdse\\b|^breq\\b|^breqz\\b|^bltz\\b|^bgez\\b|^blez\\b|^bgtz\\b|^beq\\b|^beqz\\b|^brge\\b|^bge\\b|^brgt\\b|^bgt\\b|^brle\\b|^ble\\b|^brlt\\b|^blt\\b|^brne\\b|^brnez\\b|^bne\\b|^sap\\b|^sna\\b|^sdns\\b|^sdse\\b|^seq\\b|^sge\\b|^sg\\b|^sle\\b|^slt\\b|^sne\\b|^select\\b'
+    'name':'keyword.other.special-method'
+  }
+  {
+    'match': '^.*:\n'
+    'name': 'support.function'
+  }
+  {
+    'match': '\\bActivate\\b|\\bAirRelease\\b|\\bCharge\\b|\\bClearMemory\\b|\\bColor\\b|\\bCompletionRatio\\b|\\bElevatorLevel\\b|\\bElevatorSpeed\\b|\\bError\\b|\\bExportCount\\b|\\bFiltration\\b|\\bHarvest\\b|\\bHorizontal\\b|\\bHorizontalRatio\\b|\\bIdle\\b|\\bImportCount\\b|\\bLock\\b|\\bMaximum\\b|\\bMode\\b|\\bOn\\b|\\bOpen\\b|\\bOutput\\b|\\bPlant\\b|\\bPositionX\\b|\\bPositionY\\b|\\bPositionZ\\b|\\bPower\\b|\\bPowerActual\\b|\\bPowerGeneration\\b|\\bPowerPotential\\b|\\bPowerRequired\\b|\\bPressure\\b|\\bPressureExternal\\b|\\bPressureInteral\\b|\\bPressureSetting\\b|\\bQuantity\\b|\\bRatio\\b|\\bRatioCarbonDioxide\\b|\\bRatioNitrogen\\b|\\bRatioOxygen\\b|\\bRatioPollutant\\b|\\bRatioVolatiles\\b|\\bRatioWater\\b|\\bReagents\\b|\\bRecipeHash\\b|\\bRequestHash\\b|\\bRequiredPower\\b|\\bSetting\\b|\\bSolarAngle\\b|\\bTemperature\\b|\\bTemperatureExternal\\b|\\bTemperatureSettings\\b|\\bTotalMoles\\b|\\bVelocityMagnitude\\b|\\bVelocityRelativeX\\b|\\bVelocityRelativeY\\b|\\bVelocityRelativeZ\\b|\\bVertical\\b|\\bVerticalRatio\\b|\\bVolume\\b|\\bPrefabHash\\b|\\bTargetX\\b|\\bTargetY\\b|\\bTargetZ\\b|\\bMineablesInVicinity\\b|\\bOccupied\\b|\\bOccupantHash\\b|\\bDamage\\b|\\bEfficiency\\b|\\bHealth\\b|\\bGrowth\\b|\\bChargeRatio\\b|\\bClass\\b|\\bPressureWaste\\b|\\bPressureAir\\b|\\bMaxQuantity\\b|\\bMature\\b'
+    'name': 'keyword'
+  }
+  {
+    'match': '\\bd[b,0-5]\\b|\\br[0-9]\\b|\\br1[0-5]\\b|\\bra\\b|\\bsp\\b'
+    'name': 'variable'
+  }
+  {
+    'match': '\\bRobotMode\.(Nothing|Follow|MoveToTarget|Roam|Unload|PathToTarget|StorageFull)\\b'
+    'name': 'keyword'
+  }
+  {
+    'match': '-?\\b[0-9]\\d*(\\.\\d+)?\\b'
+    'name': 'constant'
+  }
+
+]
